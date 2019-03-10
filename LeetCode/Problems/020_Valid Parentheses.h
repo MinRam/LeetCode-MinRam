@@ -14,12 +14,13 @@ static const auto __ = []() {
 class Solution {
 public:
 	bool isValid(string s) {
-		if (s.size() == 0) return true;
-		if (s.size() == 1) return false;
+		int len = s.length();
+		if (len == 0) return true;
+		if ((len & 1) == 0) return false;
 
 		stack<char> charStack;
 
-		for (size_t i = 0; i < s.size(); ++i) {
+		for (size_t i = 0; i < len); ++i) {
 			switch (s[i]) {
 				case ')':
 					if (!charStack.empty() && charStack.top() == '(')
