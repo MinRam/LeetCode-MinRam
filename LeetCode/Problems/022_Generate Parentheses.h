@@ -12,49 +12,19 @@ static const auto __ = []() {
 }();
 class Solution {
 public:
-    unordered_map<int, vector<string>> generatedParentheses;
-    vector<string> generateParenthesis(int n) {
-        auto mapFind = generatedParentheses.find(n);
-        if(mapFind != generatedParentheses.end())   return mapFind->second;
-        vector<string> result;
-        if(n == 0)
-        {
-            return result;
+  vector<string> generateParenthesis(int n) {
+    vector<vector<string>> dp(n + 1);
+    dp[0] = {""};
+    for (int i = 1; i <= n; ++i) {
+      for (string str : dp[i - 1]) {
+        dp[i].push_back(str + "()");
+        int j = str.length() - 1;
+        while (str[j] == ')') {
+          dp[i].push_back(str.substr(0, j) + "()" + str.substr(j));
+          j--;
         }
-        if(n == 1)
-        {
-            result.push_back("()");
-        }
-        else
-        {
-            int i;
-            vector<string> prefixes, suffixes;
-            for(i = 1; i < n; i++)
-            {
-                prefixes = generateParenthesis(i);
-                if(i == n - 1)
-                {
-                    suffixes.clear();
-                    suffixes.push_back("");
-                }
-                else
-                {
-                    suffixes = generateParenthesis(n - i - 1);
-                }
-                for(string prefix : prefixes)
-                {
-                    for(string suffix : suffixes)
-                    {
-                        result.push_back(prefix + "(" + suffix + ")" );
-                    }
-                    if(i == n - 1)
-                    {
-                        result.push_back("(" + prefix + ")");
-                    }
-                }
-            }
-        }
-        generatedParentheses[n] = result;
-        return result;
+      }
     }
+    return dp[n];
+  }
 };
