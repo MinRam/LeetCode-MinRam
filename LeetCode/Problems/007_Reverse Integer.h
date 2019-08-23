@@ -14,23 +14,13 @@ static const auto __ = []() {
 
 class Solution {
 public:
-	string convert(string s, int numRows) {
-		if (numRows == 1 
-				|| s.size() <= numRows) return s;
-
-		string resStr;
-		int sectionSize = 2 * numRows - 2;
-		for (int i = 0; i < numRows; ++i) {
-			for (int j = i; j < s.size(); j += sectionSize) {
-				resStr += s[j];
-				if (i != 0 && i != numRows - 1) {
-					int temp = j + sectionSize - 2 * i;
-					if (temp < s.size()) {
-						resStr += s[temp];
-					}
-				}
-			}
-		}
-		return resStr;
-	}
+    int reverse(int x) {
+        int res = 0;
+        while (x != 0) {
+            if (abs(res) > INT_MAX / 10) return 0;
+            res = res * 10 + x % 10;
+            x /= 10;
+        }
+        return res;
+    }
 };
