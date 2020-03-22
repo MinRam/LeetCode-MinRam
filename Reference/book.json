@@ -1,0 +1,39 @@
+{
+    "title": "LeetCode Learning Notes",
+    "author": "MinRam",
+    "description": "Used for LeetCode Learning Notes",
+    "language": "en",
+    "links": {
+
+    },
+    "styles": {
+
+    },
+    "plugins": [
+        "back-to-top-button",
+        "code",
+        "comment",
+        "expandable-chapters-small",
+        "insert-logo",
+        "-share",
+        "sharing-plus",
+        "splitter",
+        "tbfed-pagefooter"
+    ],
+    "pluginsConfig": {
+        "insert-logo": {
+            "url": "images/logo.png",
+            "style": "background: none; max-height: 40px; min-height: 40px;"
+        },
+        "sharing-plus": {
+            "qq": true,
+            "google": true,
+            "qzone": true
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright &copy MinRam 2020",
+            "modify_label": "Update on",
+            "modify_format": "YYYY-MM-DD HH:mm"
+        }
+    }
+}
