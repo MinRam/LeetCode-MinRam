@@ -4,23 +4,29 @@
     "description": "Used for LeetCode Learning Notes",
     "language": "en",
     "links": {
-
     },
     "styles": {
-
+        "ebook": "styles/marxico.css"
     },
     "plugins": [
+        "atoc",
         "back-to-top-button",
         "code",
         "comment",
         "expandable-chapters-small",
+        "highlight",
         "insert-logo",
+        "katex",
         "-share",
         "sharing-plus",
         "splitter",
         "tbfed-pagefooter"
     ],
     "pluginsConfig": {
+        "atoc": {
+            "addClass": true,
+            "className": "atoc"
+        },
         "insert-logo": {
             "url": "images/logo.png",
             "style": "background: none; max-height: 40px; min-height: 40px;"
