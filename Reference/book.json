@@ -17,6 +17,7 @@
         "highlight",
         "insert-logo",
         "katex",
+        "mermaid",
         "-share",
         "sharing-plus",
         "splitter",
