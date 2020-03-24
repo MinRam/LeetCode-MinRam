@@ -9,11 +9,13 @@
         "ebook": "styles/marxico.css"
     },
     "plugins": [
+        "anchor-navigation-ex",
         "atoc",
         "back-to-top-button",
         "code",
         "comment",
         "expandable-chapters-small",
+        "graph",    
         "highlight",
         "insert-logo",
         "katex",
@@ -24,6 +26,13 @@
         "tbfed-pagefooter"
     ],
     "pluginsConfig": {
+        "anchor-navigation-ex": {
+            "isRewritePageTitle": true,
+            "isShowTocTitleIcon": true,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        },
         "atoc": {
             "addClass": true,
             "className": "atoc"
