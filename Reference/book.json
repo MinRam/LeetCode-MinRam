@@ -37,7 +37,7 @@
             "className": "atoc"
         },
         "insert-logo": {
-            "url": "images/logo.png",
+            "url": "/Reference/images/logo.png",
             "style": "background: none; max-height: 40px; min-height: 40px;"
         },
         "sharing-plus": {
