@@ -97,28 +97,8 @@ public:
 
 ![切线迭代过程](./images/069_sqrtx_01.jpg)
 
-图形演示过程：
+图形演示过程: 
 
-{% graph %}
-{
-    "title": "x^2",
-    "grid": true,
-    "yAxis": {
-        "domain": [-1, 9]
-    },
-    "xAxis":{
-        "domain": [-1, 10]
-    },
-    "data": [{
-        "fn": "x^2 - 4",
-        "derivative": {
-            "fn": "2*x",
-            "updateOnMouseMove":"true"
-        }
-        
-    }]
-}
-{% endgraph %}
 
 **解：** $$T(n) = log_2 n$$ 
 ```cpp
